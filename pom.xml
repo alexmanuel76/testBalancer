@@ -12,7 +12,7 @@
 	<artifactId>balancertest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>balancertest</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Siple App to test load balancer</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -49,6 +49,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.0.0.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>

@@ -35,7 +35,8 @@ public class BalancerController {
 		balancer.setComentario("Hola "+fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds());
 		
 		balancerRepository.save(balancer);
-		return "saved";
+		String mensajeRespuesta = "saved from: "+hostname;
+		return mensajeRespuesta;
 	}
 	
 	@GetMapping(path="/listar")
