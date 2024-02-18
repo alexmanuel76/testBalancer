@@ -32,7 +32,7 @@ public class BalancerController {
 		}
 		balancer.setServidor(hostname);
 		balancer.setHora(fechaSQL);
-		balancer.setComentario("Hola "+fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds());
+		balancer.setComentario("Hola V2:"+fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds());
 		
 		balancerRepository.save(balancer);
 		String mensajeRespuesta = "saved from: "+hostname;
@@ -42,5 +42,26 @@ public class BalancerController {
 	@GetMapping(path="/listar")
 	public @ResponseBody Iterable<Balancer> obtenerListado(){
 		return balancerRepository.findAll();
+	}
+
+	@GetMapping(path="/grabarV2")
+	public @ResponseBody String grabarVer2(){
+		Balancer balancer = new Balancer();
+		Date fecha = new Date();
+		String hostname ="";
+		java.sql.Date fechaSQL = new java.sql.Date(fecha.getTime());
+		try {
+			hostname = InetAddress.getLocalHost().getHostName();
+		}
+		catch(Exception e) {
+			System.out.println("Error: "+e.getMessage());
+		}
+		balancer.setServidor(hostname);
+		balancer.setHora(fechaSQL);
+		balancer.setComentario("Hola "+fecha.getHours()+":"+fecha.getMinutes()+":"+fecha.getSeconds());
+		
+		balancerRepository.save(balancer);
+		String mensajeRespuesta = "saved from: "+hostname;
+		return mensajeRespuesta;
 	}
 }
