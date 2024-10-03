@@ -1,0 +1,9 @@
+services:
+    apiDB:
+        image: "alexandermogollon/test_api_db:1.1"
+        platform: linux/x86_64
+        environment:
+            MYSQL_ROOT_PASSWORD: "johndoe"
+        ports:
+            - "3306:3306"
+            
