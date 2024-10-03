@@ -1,4 +1,4 @@
-com/mova/balancertest/model/Balancer.class
 com/mova/balancertest/BalancertestApplication.class
-com/mova/balancertest/repositories/BalancerRepository.class
 com/mova/balancertest/controllers/BalancerController.class
+com/mova/balancertest/model/Balancer.class
+com/mova/balancertest/repositories/BalancerRepository.class
