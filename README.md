@@ -1,0 +1,1 @@
+Simple Balancer tester, this endpoint will deploy a Spring boot app that store in a mysql database the hostname and the time in a table, the idea is to deploy multiple services in multiple servers located behind a NGinx balancer, only 1 database will be needed
